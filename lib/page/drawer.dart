@@ -1,7 +1,8 @@
-import 'package:counter_7/form.dart';
+import 'package:counter_7/page/form.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/show_data.dart';
+import 'package:counter_7/page/show_data.dart';
+import 'package:counter_7/page/watchlist_page.dart';
 
 class myDrawer extends StatelessWidget {
   const myDrawer({Key? key}):super(key:key);
@@ -27,6 +28,12 @@ class myDrawer extends StatelessWidget {
               title: const Text('Data Budget'),
               onTap: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ShowData()),);
+              }
+          ),
+          ListTile(
+              title: const Text('Wishlist'),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const WatchListPage()),);
               }
           ),
         ],
