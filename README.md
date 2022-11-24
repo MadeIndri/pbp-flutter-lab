@@ -71,3 +71,38 @@ Ketika menjalankan navigator push (atau sejenisnya), halaman baru akan ditambahk
 * Membuat file form untuk membuat form dan menerima masukan dari user 
 * Data dari form akan dimasukkan ke dalam list yang ada di file data dan akan diset untuk menambahkan objek pada atribut class untuk menampung data tersebut
 * Membuat file show_data untuk menampilkan data dengan melakukan loop dari data dan akan ditampilkan sebagai card dengan menggunakan ListView.Buider
+
+## Tugas 9
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya, kita tetap bisa mengambil data JSON tanpa membuat model terlebih dahulu, tetapi data yang diambil sulit disimpan secara terstruktur. Sehingga, hal tersebut TIDAK lebih baik daripada membuat model sebelum pengambilan data JSON.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Widget yang saya pakai, diantaranya:
+* MaterialPageRoute : Untuk mengganti halaman
+* ListView : Untuk membuat widget list
+* Container : Untuk menampung beberapa komponen
+* BoxDecoration : Untuk mengatur style container
+* Text : Untuk menampilkan sebuah teks biasa 
+* TextStyle : Untuk mengatur style dari text
+* Flexible : Untuk mengatur letak text agar tidak overflow
+* Column : Untuk mengatur layout secara vertikal
+* SizedBox : Untuk membuat suatu box yang berguna untuk mengelola letak
+* FutureBuilder : Untuk membuat widget yang dapat menangkap data
+* CheckBox : State untuk menggantI status watched (sudah ditonton atau belum)
+* ElevatedButton : Untuk membuat button di bagian bawah
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+Pada tutorial ini karena pengambilan data dari webservice, maka perlu melakukan dependancy http. Langkah-langkah selanjutnya:
+* Membuat model dari data yang ingin diambil (opsional)
+* Melakukan fetch data dengan HTTP request 
+* Data yang didapat kemudian diubah menjadi model yang sudah dibuat sebelumnya
+* Menampilkan data dengan FutureBuilder
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+* Menambahkan dependency http
+* Menambahkan ListTile WatchList pada drawer
+* Membuat model watchlist, yaitu watchlist.dart
+* Menambahkan watchlist ke dalam drawer
+* Membuat file untuk fetch data, yaitu fetch_data.dart dan melakukan fetch dengan FutureBuilder di watchlist_page.dart
+* Membuat watchlist_page.dart untuk menampilkan data
+* Menampilkan data yang telah dikonversi ke aplikasi dengan FutureBuilder
